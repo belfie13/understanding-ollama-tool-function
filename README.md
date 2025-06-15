@@ -355,13 +355,13 @@ The actual execution of tools is the responsibility of the client application. H
 
 ```
 ┌─────────────┐    1. Tool definitions    ┌────────┐    2. Tool prompt      ┌─────┐
-│ Your App    │───────────────────────────▶ Ollama │───────────────────────▶ LLM │
+│ Your App    │───────────────────────────▶ Ollama │────────────────────────▶ LLM │
 └─────┬───────┘                           └────┬───┘                        └──┬──┘
       │                                        │                               │
       │                                        │     3. Raw text with tool     │
       │                                        │        call embedded          │
-      │                                        │◀─────────────────────────────┘
-      │      4. Parsed tool call              │
+      │                                        │◀──────────────────────────────┘
+      │      4. Parsed tool call               │
       │◀───────────────────────────────────────┘
       │
       │      5. Execute tool in your application
@@ -374,7 +374,7 @@ The actual execution of tools is the responsibility of the client application. H
       │      7. Send result back to LLM
       ▼
 ┌─────────────┐    Tool result message    ┌────────┐       Format result       ┌─────┐
-│ Your App    │───────────────────────────▶ Ollama │──────────────────────────▶ LLM │
+│ Your App    │───────────────────────────▶ Ollama │───────────────────────────▶ LLM │
 └─────────────┘                           └────────┘                           └─────┘
 ```
 
